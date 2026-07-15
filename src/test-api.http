@@ -1,0 +1,11 @@
+### Test Validation - Future Date
+POST http://localhost:8080/jobs
+Content-Type: application/json
+
+{
+  "companyName": "Amazon",
+  "jobTitle": "Java Developer",
+  "location": "Hyderabad",
+  "status": "Applied",
+  "appliedDate": "2027-01-01"
+}
