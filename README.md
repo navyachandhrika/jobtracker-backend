@@ -142,34 +142,55 @@ React-->>User: Refresh Dashboard
 
 ------------------------------------------------------------------------
 
-# Edit Job Flow
+## Edit Job Flow
 
-``` mermaid
+```mermaid
 flowchart TD
-A[Click Edit] --> B[Load Existing Job]
-B --> C[Modify Fields]
-C --> D[PUT /jobs/{id}]
-D --> E[Controller]
-E --> F[Service]
-F --> G[Repository]
-G --> H[(MySQL)]
-H --> I[Refresh Dashboard]
+    A[User Clicks Edit]
+    B[Load Existing Job]
+    C[Modify Job Details]
+    D[Send Update Request]
+    E[Controller]
+    F[Service]
+    G[Repository]
+    H[(MySQL Database)]
+    I[Update Successful]
+    J[Refresh Dashboard]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
 ```
 
 ------------------------------------------------------------------------
 
-# Delete Job Flow
+## Delete Job Flow
 
-``` mermaid
+```mermaid
 flowchart TD
-A[Click Delete] --> B[DELETE /jobs/{id}]
-B --> C[Controller]
-C --> D[Service]
-D --> E[Repository]
-E --> F[(MySQL)]
-F --> G[Refresh Dashboard]
-```
+    A[User Clicks Delete]
+    B[Send Delete Request]
+    C[Controller]
+    D[Service]
+    E[Repository]
+    F[(MySQL Database)]
+    G[Delete Job Record]
+    H[Refresh Dashboard]
 
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+```
 ------------------------------------------------------------------------
 
 # Search Flow
