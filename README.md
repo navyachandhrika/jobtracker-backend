@@ -318,17 +318,6 @@ src/main/java
   PUT      /jobs/{id}              Update Job
   DELETE   /jobs/{id}              Delete Job
 
-------------------------------------------------------------------------
-
-# Future Enhancements
-
--   JWT Authentication
--   BCrypt Password Encryption
--   Resume Upload
--   Email Notifications
--   Interview Reminders
--   Charts & Analytics
--   Role-Based Access Control
 
 ------------------------------------------------------------------------
 
