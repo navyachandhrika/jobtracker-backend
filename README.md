@@ -44,16 +44,26 @@ searching, and filtering jobs.
 
 ------------------------------------------------------------------------
 
-# System Architecture
+## System Architecture
 
-``` mermaid
+```mermaid
 flowchart LR
-A[React Frontend] --> B[Spring Boot REST API]
-B --> C[Controller]
-C --> D[Service]
-D --> E[Repository]
-E --> F[Hibernate / JPA]
-F --> G[(MySQL)]
+
+A["React Frontend"]
+B["Spring Boot REST API"]
+C["Controller Layer"]
+D["Service Layer"]
+E["Repository Layer"]
+F["Hibernate / JPA"]
+G["MySQL Database"]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+
 G --> F
 F --> E
 E --> D
